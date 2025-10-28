@@ -1,4 +1,4 @@
-# Triangle Analyzer 🛠️
+# Triangle Analyzer 
 
 A Python program to analyze triangles based on the lengths of their three sides. The program determines the type of triangle, calculates its perimeter and area, and visualizes the triangle.
 
@@ -30,10 +30,8 @@ A Python program to analyze triangles based on the lengths of their three sides.
    - Acute / Obtuse: based on angles calculated via the law of cosines
 3. **Perimeter Calculation:** Sum of all three sides.
 4. **Area Calculation:** Using Heron's formula:
-   \[
-   s = \frac{a+b+c}{2}, \quad
-   \text{Area} = \sqrt{s(s-a)(s-b)(s-c)}
-   \]
+s = (a + b + c) / 2
+Area = sqrt(s * (s - a) * (s - b) * (s - c))
 5. **Visualization:** Draw the triangle using a plotting library.
 6. **Output:** Display triangle type, perimeter, area, and the figure.
 

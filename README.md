@@ -29,8 +29,8 @@ A Python program to analyze triangles based on the lengths of their three sides.
    - Right: satisfies Pythagorean theorem
    - Acute / Obtuse: based on angles calculated via the law of cosines
 3. **Perimeter Calculation:** Sum of all three sides.
-4. **Area Calculation:** Using Heron's formula:
-s = (a + b + c) / 2
+4. **Area Calculation:** Using Heron's formula: <br>
+s = (a + b + c) / 2 <br>
 Area = sqrt(s * (s - a) * (s - b) * (s - c))
 5. **Visualization:** Draw the triangle using a plotting library.
 6. **Output:** Display triangle type, perimeter, area, and the figure.

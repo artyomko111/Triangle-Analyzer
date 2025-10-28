@@ -1,0 +1,89 @@
+<html>
+<head>
+<style>
+  body {
+    font-size: 1.2em;
+  }
+</style>
+</head>
+<body>
+<hr>
+<marquee behavior=alternate>
+javascript testing
+</marquee>
+<hr>
+GUI: form  click: event: calling function<br>
+please input the length of side a: <input type=text id=sideA><br>
+please input the length of side b: <input type=text id=sideB><br>
+please input the length of side c: <input type=text id=sideC><br>
+<button onclick='judge();'> judge </button>
+<p id=result></p>
+<p id=perimeterResult></p> <!-- added perimeter display -->
+<p id="Square"> </p><!-- count square-->
+<script>
+function judge() {
+  var a = parseFloat(document.getElementById('sideA').value);
+  var b = parseFloat(document.getElementById('sideB').value);
+  var c = parseFloat(document.getElementById('sideC').value);
+  // Check if it is a triangle
+  if (a + b <= c || b + c <= a || a + c <= b || isNaN(a) || isNaN(b) || isNaN(c)) {
+    document.getElementById('result').innerHTML = "Not a triangle.";
+    return;
+  }
+  // Determine the type of triangle
+  var type;
+  var imgSrc;
+  var aa = a * a;
+  var bb = b * b;
+  var cc = c * c;
+  if (a === b && b === c) {
+    type = "Equilateral Triangle";
+    imgSrc = "8178335011_caef3983b2_z.jpg";
+  } else if (a === b || b === c || a === c) {
+    if (a*a + b*b === c*c || b*b + c*c === a*a || a*a + c*c === b*b) {
+      type = "Isosceles Right Triangle";
+      imgSrc = "isocelous1079688265401325227";
+    } else if (a*a + b*b < c*c || b*b + c*c < a*a || a*a + c*c < b*b) {
+      type = "Isosceles Obtuse Triangle";
+      imgSrc = "geometriya-59191-ravnobedrennyy-tupougolnyy-treugolnik.jpg";
+    } else {
+      type = "Isosceles Acute Triangle";
+      imgSrc = "Isosceles Acute Triangle.jpg";
+    }
+  } else {
+    if (a*a + b*b === c*c || b*b + c*c === a*a || a*a + c*c === b*b) {
+      type = "Scalene Right Triangle";
+      imgSrc = "1010852_2.jpg";
+    } else if (a*a + b*b < c*c || b*b + c*c < a*a || a*a + c < bb) {
+type = "Scalene Obtuse Triangle";
+imgSrc = "Scalene Obtuse Triangle.jpg";
+} else {
+type = "Scalene Acute Triangle";
+imgSrc = "Scalene Acute Triangle.jpg";
+}
+}
+// Calculate perimeter and display result
+var perimeter = a + b + c;
+document.getElementById('perimeterResult').innerHTML = "Perimeter: " + perimeter.toFixed(2);
+// Display result and image
+document.getElementById('result').innerHTML = type;
+var img = document.createElement("img");
+img.src = imgSrc;
+img.alt = type;
+document.getElementById('result').appendChild(img);
+// Calculate perimeter and display result
+var perimeter = a + b + c;
+document.getElementById('perimeterResult').innerHTML = "Perimeter: " + perimeter.toFixed(2);
+// Display result and image
+document.getElementById('result').innerHTML = type;
+var img = document.createElement("img");
+img.src = imgSrc;
+img.alt = type;
+document.getElementById('result').appendChild(img);
+var pl = (a+b+c)/2;
+var s = Math.sqrt(pl*(pl-a)*pl*(pl-b)*(pl-c));
+document.getElementById('Square').innerHTML = "Square: " + s.toFixed(2);
+}
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Triangle Analyzer 
 
-A Python program to analyze triangles based on the lengths of their three sides. The program determines the type of triangle, calculates its perimeter and area, and visualizes the triangle.
+An HTML program to analyze triangles based on the lengths of their three sides. The program determines the type of triangle, calculates its perimeter and area, and visualizes the triangle.
 
 ## Features
 
